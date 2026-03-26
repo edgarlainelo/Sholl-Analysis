@@ -955,7 +955,7 @@ class Masters:
         self.df.insert(0, 'Code', self.first_column)
         
 
-        self.df.to_csv(self.file_destination + f"/{str(self.ask_end_file_name.get("1.0", "end-1c"))}_LinesResults.xlsx", sheet_name = "Sheet1")
+        self.df.to_csv(self.file_destination + f"/{str(self.ask_end_file_name.get("1.0", "end-1c"))}_LinesResults.csv")
         self.done = tk.messagebox.showinfo('Complete', 'Analysis is done.')
 
     def create_excel(self, data, codes, columns):
@@ -1009,7 +1009,7 @@ class Masters:
         self.df.insert(1, 'MaxIntersectionRadius',self.max_column)
         self.df.insert(2, 'LastRadius', self.last_column)
               
-        self.df.to_csv(self.file_destination + f"/{str(self.ask_end_file_name.get("1.0", "end-1c"))}_ShollResults.xlsx", sheet_name = "Sheet1")
+        self.df.to_csv(self.file_destination + f"/{str(self.ask_end_file_name.get("1.0", "end-1c"))}_ShollResults.csv")
         
         self.done = tk.messagebox.showinfo('Complete', 'Analysis is done.')
 
