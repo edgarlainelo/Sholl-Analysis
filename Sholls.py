@@ -21,8 +21,6 @@ import tifffile
 
 import math
 
-#TODO:
-#Sort Out index, lines
 
 
 class Sholl_analysis():
@@ -956,28 +954,6 @@ class Masters:
         self.first_column = self.df.pop('Code')
         self.df.insert(0, 'Code', self.first_column)
         
-        #self.index = 1
-        #self.not_null_col = 0
-        
-        #for col in self.df.columns:
-         #   try:
-          #      self.col_sum = self.df[col].sum()
-           #     if self.col_sum != 0:
-            #        self.not_null_col = self.index
-             #       self.index +=1
-
-              #  elif self.col_sum == 0:
-               #     self.index += 1 
-
-            #except:
-             #   pass
-
-        #self.df = self.df.iloc[:, :self.not_null_col]
-        #self.df = self.df.T.reset_index().sort_values(by='index')
-        
-
-        
-
 
         self.df.to_csv(self.file_destination + f"/{str(self.ask_end_file_name.get("1.0", "end-1c"))}_LinesResults.xlsx", sheet_name = "Sheet1")
         self.done = tk.messagebox.showinfo('Complete', 'Analysis is done.')
