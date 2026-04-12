@@ -98,7 +98,7 @@ class Masters:
         self.root.grid_columnconfigure(0, weight = 1)
         self.root.grid_rowconfigure(0, weight= 1)
         
-        self.label = tk.Label(self.frame, text = "Sholls's analysis", font = ('Arial', 14))
+        self.label = tk.Label(self.frame, text = "Sholl analysis", font = ('Arial', 14))
         self.label.grid(row=0, column=0, padx=190, pady=10, sticky="w")
 
         self.ask_type_label = tk.Label(self.frame, text = 'Anlysis type:', font = ('Arial', 12))
